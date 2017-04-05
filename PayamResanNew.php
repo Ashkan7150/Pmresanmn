@@ -100,9 +100,10 @@ if($textmessage == '/start')
 var_dump(makereq('sendMessage',[
         'chat_id'=>$update->message->chat->id,
         'text'=>"سلام
-به ربات خودتان خوش آمدید 🌹
+به ربات خودتان خوش آمدید🌹
+🎗کانال: @WarriorsTM
 
-پنل مدیریتی 👇",
+پنل مدیریتی👇",
         'parse_mode'=>'MarkDown',
         'reply_markup'=>json_encode([
             'keyboard'=>[
@@ -152,7 +153,9 @@ $pmembersid= explode("\n",$txxt);
 		if ($javab != "")
 	{
 	save("profile.txt","$javab");
-	SendMessage($chat_id,"با موفقیت تغییریافت");
+	SendMessage($chat_id,"با موفقیت تغییریافت👍
+➖➖➖➖➖➖➖➖➖
+🎗کانال: @WarriorsTM");
 	}
 	}
 elseif($textmessage == 'پروفایل👤')
@@ -166,11 +169,13 @@ elseif($textmessage == 'پروفایل👤')
 		if ($javab != "")
 	{
 	save("done.txt","$javab");
-	SendMessage($chat_id,"پیام پیشفرض ربات به
+	SendMessage($chat_id,"👌پیام پیشفرض ربات به:
 
 $javab
 
-تغییر یافت ✅");
+تغییر یافت ✅
+➖➖➖➖➖➖➖➖➖
+🎗کانال: @WarriorsTM");
 	}
         }
   elseif(strpos($textmessage , '/setstart')!== false && $chat_id == $admin)
@@ -179,18 +184,22 @@ $javab
     if ($javab != "")
   {
   save("start.txt","$javab");
-  SendMessage($chat_id,"پیام شروع (استارت) ربات به
+  SendMessage($chat_id,"👌پیام شروع (استارت) ربات به
 
 $javab
 
-تغییر یافت ✅");
+تغییر یافت ✅
+➖➖➖➖➖➖➖➖➖
+🎗کانال: @WarriorsTM");
   }
   }
 
 elseif($textmessage == '⚓️ Help')
 if($chat_id == $admin){
 	{
-		Sendmessage($chat_id," 🔸مسدود کردن فرد
+		Sendmessage($chat_id,"🏅سورس ورژن 2.1 پیام رسان واریور🏅
+➖➖➖➖➖➖➖➖➖➖➖➖
+🔸مسدود کردن فرد
 `/ban` (Reply)
 
 🔸آزاد کردن فرد
@@ -204,8 +213,8 @@ if($chat_id == $admin){
 
 🔸تنظیم متن شروع
 `/setstart` (Text)
-
-✍🏻 Source By #DeViL
+➖➖➖➖➖➖➖➖➖➖➖➖
+🎗کانال: @WarriorsTM
 ");
 	}
 }
@@ -213,7 +222,9 @@ else
 	{
 		Sendmessage($chat_id,"🔶راهنما ربات:
 ➖➖➖➖➖➖➖
-Source By 》 @Me_DeViL
+Source By 》 @Zzz_MahsA_zzZ
+🎗Channel: @WarriorsTM
+
 ");
 	}
 
@@ -374,7 +385,9 @@ Sendmessage($chat_id,"You Blocked !🚫");
     	if($textmessage != "/ban" && $textmessage != "/unban")
     	{
 sendmessage($rpto,"$textmessage");
-sendmessage($chat_id,"🗣پیام شما با موفقیت به کاربر ارسال شد." );
+sendmessage($chat_id,"🗣پیام شما با موفقیت به کاربر ارسال شد.
+➖➖➖➖➖➖➖➖➖
+🎗کانال: @WarriorsTM" );
     	}
     	else
     	{
