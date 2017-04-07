@@ -1,6 +1,6 @@
 <?php
 
-define('API_KEY','**TOKEN**');
+define('API_KEY','351954549:AAFFkYHx3TAQHvPbQnTCKcDMwp20-WOG4ds');
 
 function makereq($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -61,7 +61,7 @@ $file = $update->message->document;
 $music = $update->message->audio;
 $voice = $update->message->voice;
 $forward = $update->message->forward_from;
-$admin = **ADMIN**;
+$admin = 328567398;
 //-------
 function SendMessage($ChatId, $TextMsg)
 {
@@ -100,21 +100,21 @@ if($textmessage == '/start')
 var_dump(makereq('sendMessage',[
         'chat_id'=>$update->message->chat->id,
         'text'=>"سلام
-به ربات خودتان خوش آمدید🌹
-🎗کانال: @WarriorsTM
+به ربات خودتون خوش آمدین🌹
+ کانال ما: @Pmresansazmn
 
 پنل مدیریتی👇",
         'parse_mode'=>'MarkDown',
         'reply_markup'=>json_encode([
             'keyboard'=>[
               [
-                ['text'=>"📊 Members"],['text'=>"🚫 Block List"]
+                ['text'=>"تعداد ممبر ها"],['text'=>"🚫بلاک لیست ها"]
               ],
 	      [
-                ['text'=>"📨 Send To All"],['text'=>"🗑 Clean Block List"]
+                ['text'=>"📨 ارسال به همه"],['text'=>"🗑 پاک کردن بلاک شده ها"]
               ],
 	      [
-	        ['text'=>"⚓️ Help"]
+	        ['text'=>"راهنما"]
 	      ]
             ],
             'resize_keyboard'=>true,
@@ -131,7 +131,7 @@ var_dump(makereq('sendMessage',[
         'reply_markup'=>json_encode([
             'keyboard'=>[
        [
-                ['text'=>"پروفایل👤"]
+                ['text'=>"پروفایل من"]
               ]
             ],
             'resize_keyboard'=>true,
@@ -155,10 +155,10 @@ $pmembersid= explode("\n",$txxt);
 	save("profile.txt","$javab");
 	SendMessage($chat_id,"با موفقیت تغییریافت👍
 ➖➖➖➖➖➖➖➖➖
-🎗کانال: @WarriorsTM");
+🎗کانال: @pmresansazmn");
 	}
 	}
-elseif($textmessage == 'پروفایل👤')
+elseif($textmessage == 'پروفایل من')
 	{
 	$profile = file_get_contents("profile.txt");
 	Sendmessage($chat_id," $profile ");
@@ -175,7 +175,7 @@ $javab
 
 تغییر یافت ✅
 ➖➖➖➖➖➖➖➖➖
-🎗کانال: @WarriorsTM");
+کانال ما: @pmresansazmn");
 	}
         }
   elseif(strpos($textmessage , '/setstart')!== false && $chat_id == $admin)
@@ -197,7 +197,7 @@ $javab
 elseif($textmessage == '⚓️ Help')
 if($chat_id == $admin){
 	{
-		Sendmessage($chat_id,"🏅سورس ورژن 2.1 پیام رسان واریور🏅
+		Sendmessage($chat_id," ورژن 1.0 پیام رسان
 ➖➖➖➖➖➖➖➖➖➖➖➖
 🔸مسدود کردن فرد
 `/ban` (Reply)
@@ -214,7 +214,7 @@ if($chat_id == $admin){
 🔸تنظیم متن شروع
 `/setstart` (Text)
 ➖➖➖➖➖➖➖➖➖➖➖➖
-🎗کانال: @WarriorsTM
+🎗کانال: @pmresansazmn
 ");
 	}
 }
@@ -222,8 +222,8 @@ else
 	{
 		Sendmessage($chat_id,"🔶راهنما ربات:
 ➖➖➖➖➖➖➖
-Source By 》 @Zzz_MahsA_zzZ
-🎗Channel: @WarriorsTM
+Source By 》 @karbad
+🎗Channel: @pmresanmn
 
 ");
 	}
@@ -240,7 +240,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id," $done ");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید در صورت دیده شدن بیشتر از ربات بلاک میشوید");
 
     }
     }
@@ -257,7 +257,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"شماره با موفقیت ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید در صورت دیده شدن بیشتراز ربات بلاک میشوید");
 
 }
     }
@@ -276,7 +276,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"استیکر با موفقیت ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید درصورت دیده شدن بیشتر از ربات بلاک میشوید");
 
 }
     }
@@ -296,7 +296,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"تصویر باموفقیت ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید درصورت دیده شدن بیشتر از ربات بلاک میشوید");
 
 }
     }
@@ -315,7 +315,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"ویس شما باموفقیت ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید درصورت دیده شدن بیشتر از ربات بلاک میشوید");
 
 }
     }
@@ -333,7 +333,8 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"فیلم شما ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید درصورت دیده شدن بیشتر از ربات بلاک میشوید");
+
 
 }
     }
@@ -341,7 +342,7 @@ Sendmessage($chat_id,"You Blocked !🚫");
 
 
 
-	elseif($textmessage == '📊 Members' && $chat_id == $admin)
+	elseif($textmessage == 'تعداد ممبر ها' && $chat_id == $admin)
 	{
 		$txtt = file_get_contents('member.txt');
 		$membersidd= explode("\n",$txtt);
@@ -351,7 +352,7 @@ sendmessage($chat_id,"👥لیست اعضای ربات: \n\n🔸 $mmemcount عض
 }
 }
 
-	elseif($textmessage == '🚫 Block List' && $chat_id == $admin){
+	elseif($textmessage == 'بلاک لیست ها🚫' && $chat_id == $admin){
 		$txtt = file_get_contents('banlist.txt');
 		$membersidd= explode("\n",$txtt);
 		$mmemcount = count($membersidd) -1;
@@ -376,7 +377,7 @@ Forward($admin,$chat_id,$message_id);
 Sendmessage($chat_id,"مکان موردنظر باموفقیت ارسال شد");
 }else{
 
-Sendmessage($chat_id,"You Blocked !🚫");
+Sendmessage($chat_id,"شما بلاک شدید در صورت دیده شدن بیشتر بلاک میشوید");
 
 }
     }
@@ -387,7 +388,7 @@ Sendmessage($chat_id,"You Blocked !🚫");
 sendmessage($rpto,"$textmessage");
 sendmessage($chat_id,"🗣پیام شما با موفقیت به کاربر ارسال شد.
 ➖➖➖➖➖➖➖➖➖
-🎗کانال: @WarriorsTM" );
+🎗کانال: @Pmresanmn" );
     	}
     	else
     	{
@@ -402,8 +403,8 @@ sendmessage($chat_id,"🗣پیام شما با موفقیت به کاربر ار
 
     	file_put_contents('banlist.txt',$addd);
     	{
-sendmessage($rpto,"Your Are Banned ! ⛔️");
-sendmessage($chat_id,"User Banned ! 🚫");
+sendmessage($rpto,"شما بلاک شدید");
+sendmessage($chat_id,"بن شد");
         }
     		}
 }
@@ -424,14 +425,14 @@ sendmessage($chat_id,"User Banned ! 🚫");
 
     	file_put_contents('banlist.txt',$adddd);
 }
-sendmessage($rpto,"Your Are UnBanned ✅");
-sendmessage($chat_id,"User UnBanned ✅");
+sendmessage($rpto,"شما بخشیده و ازاد شدی:)");
+sendmessage($chat_id,"ازاد شد بخشیدمش:))");
     		}
     	}
 	}
 
 
-        elseif ($textmessage =="📨 Send To All"  && $chat_id == $admin | $booleans[0]=="false") {
+        elseif ($textmessage =="ارسال به همه"  && $chat_id == $admin | $booleans[0]=="false") {
 	{
           sendmessage($chat_id,"لطفا پیام خود را ارسال کنید");
 	}
@@ -457,11 +458,11 @@ sendmessage($chat_id,"User UnBanned ✅");
          $addd = "false";
     	file_put_contents('booleans.txt',$addd);
     	}
- elseif($textmessage == '🗑 Clean Block List')
+ elseif($textmessage == 'حذف بلاک لیست ها')
  if($chat_id == $admin){
  {
  file_put_contents('banlist.txt',$chat_id);
- Sendmessage($chat_id,"❌ Black List Cleaned!");
+ Sendmessage($chat_id,"❌بلاک لیست ها حذف شدن و میتوانند ارسال پیام کنند");
  }
 }
 ?>
